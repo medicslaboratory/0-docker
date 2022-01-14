@@ -5,18 +5,18 @@ There is 4 ubuntu18 based docker images you can use for medics laboratory
 
 Images:
 
-  - 'medicslaboratory' (xxx Mb) - include Python3, CMake and Minctools2
-  - 'medicslaboratory_MAT' (xxx Gb) - include Python3, CMake, Minctools2 and MatlabRuntime2019b
-  - 'medicslaboratory_FS' (xxx Gb) - include Python3, CMake, Minctools2 and Freesurfer6
-  - 'medicslaboratory_MAT_FS' (xxx Gb) - include Python3, CMake, Minctools2, MatlabRuntime2019b and Freesurfer6
+  - 'medicslaboratory/medicslab:minimal' (504 Mb) - include Python3, CMake and Minctools2
+  - 'medicslaboratory/medicslab:matlab' (8.96 Gb) - include Python3, CMake, Minctools2 and MatlabRuntime2019b
+  - 'medicslaboratory/medicslab:freesurfer' (11.2 Gb) - include Python3, CMake, Minctools2 and Freesurfer6.
+  - 'medicslaboratory/medicslab:full' (19.6 Gb) - include Python3, CMake, Minctools2, MatlabRuntime2019b and Freesurfer6
 
 To Use :
   ```
-  docker pull <name_of_docker_image>
+  docker pull medicslabratory/medicslab:<desired_version_as_tag>
   ```
   and
   ```
-  docker run <name_of_docker_image>
+  docker run medicslabratory/medicslab:<desired_version_as_tag>
   ```
 
 ## more...
