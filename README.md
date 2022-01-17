@@ -11,8 +11,13 @@ Images:
   - 'medicslaboratory/medicslab:full' (19.6 Gb) - include Python3, CMake, Minctools2, MatlabRuntime2019b and Freesurfer6
 
 To Use :
-  ```  docker pull medicslabratory/medicslab:<desired_version_as_tag>  ```
-  and
-  ```  docker run medicslabratory/medicslab:<desired_version_as_tag>  ```
+  Getting the docker image container to your computer :
+  ```  
+  docker pull medicslabratory/medicslab:<desired_version_as_tag>  
+  ```
+  and running the container :
+  ```  
+  docker run medicslabratory/medicslab:<desired_version_as_tag>  
+  ```
 
 ## more...
