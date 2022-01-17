@@ -10,6 +10,8 @@ Images:
   - 'medicslaboratory/medicslab:freesurfer' (11.2 Gb) - include Python3, CMake, Minctools2 and Freesurfer6.
   - 'medicslaboratory/medicslab:full' (19.6 Gb) - include Python3, CMake, Minctools2, MatlabRuntime2019b and Freesurfer6
 
+###### >>> Each image contains all the features of the previous images.
+
 To Use :
 
   Getting the docker image container to your computer :
@@ -22,7 +24,8 @@ To Use :
   ```
 Tip : [If you don’t want to preface the docker command with sudo](https://docs.docker.com/engine/install/linux-postinstall/).
 
-[Content of this page]
+---------------------------
+#### [*Content of this page*]
 1. Basic example use
 2. Using matlab runtime
 3. Using Freesurfer
@@ -31,6 +34,7 @@ Tip : [If you don’t want to preface the docker command with sudo](https://docs
 
 ----------------------
 
-##1. Example use of 'medicslaboratory/medicslab:minimal' (504 Mb) :
+
+## 1. Basic example use of 'medicslaboratory/medicslab:minimal' (504 Mb) :
 
 
