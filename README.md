@@ -20,5 +20,17 @@ To Use :
   ```  
   docker run medicslabratory/medicslab:<desired_version_as_tag>  
   ```
+Tip : [If you don’t want to preface the docker command with sudo](https://docs.docker.com/engine/install/linux-postinstall/).
 
-## more...
+[Content of this page]
+1. Basic example use
+2. Using matlab runtime
+3. Using Freesurfer
+4. Getting inside the container with command line interface (CLI)
+5. Making the container your own for further development
+
+----------------------
+
+##1. Example use of 'medicslaboratory/medicslab:minimal' (504 Mb) :
+
+
