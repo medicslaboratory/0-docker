@@ -5,24 +5,22 @@ There is 4 ubuntu18 based docker images you can use for medics laboratory
 
 Images:
 
-  - 'medicslaboratory/medicslab:minimal' (504 Mb) - include Python3, CMake and Minctools2
-  - 'medicslaboratory/medicslab:matlab' (8.96 Gb) - include Python3, CMake, Minctools2 and MatlabRuntime2019b
-  - 'medicslaboratory/medicslab:freesurfer' (11.2 Gb) - include Python3, CMake, Minctools2 and Freesurfer6.
-  - 'medicslaboratory/medicslab:full' (19.6 Gb) - include Python3, CMake, Minctools2, MatlabRuntime2019b and Freesurfer6
+  - 'medicslaboratory/medicslab:minimal' (504 Mb) - include **Python3.8**, **CMake3.10** and **Minctools2.3**
+  - 'medicslaboratory/medicslab:matlab' (8.96 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **MatlabRuntime2019b**
+  - 'medicslaboratory/medicslab:freesurfer' (11.2 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **Freesurfer6**.
+  - 'medicslaboratory/medicslab:full' (19.6 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3**, **MatlabRuntime2019b** and **Freesurfer6**
 
-###### >>> Each image contains all the features of the previous images.
+To Use:
 
-To Use :
-
-  Getting the docker image container to your computer :
+  Getting the docker image container to your computer:
   ```  
   docker pull medicslabratory/medicslab:<desired_version_as_tag>  
   ```
-  and running the container :
+  and running the container:
   ```  
   docker run medicslabratory/medicslab:<desired_version_as_tag>  
   ```
-Tip : [If you don’t want to preface the docker command with sudo](https://docs.docker.com/engine/install/linux-postinstall/).
+Tip: [If you don’t want to preface the docker command with sudo](https://docs.docker.com/engine/install/linux-postinstall/).
 
 ---------------------------
 #### [*Content of this page*]
@@ -35,6 +33,17 @@ Tip : [If you don’t want to preface the docker command with sudo](https://docs
 ----------------------
 
 
-## 1. Basic example use of 'medicslaboratory/medicslab:minimal' (504 Mb) :
+## 1. Basic example use (with all 4 images):
 
+test
 
+## 2. Using matlab runtime (with images tagged as :matlab or :full):
+
+## 3. Using Freesurfer (with images tagged as :freesurfer or :full):
+
+## 4. Getting inside the container with command line interface (CLI) (with all 4 images):
+Warning: All modifications inside the docker image will be lost after you exit the container. See [docker commit](https://docs.docker.com/engine/reference/commandline/commit/) to work around this. 
+
+## 5. Making the container your own for further development (with all 4 images):
+
+--------------------
