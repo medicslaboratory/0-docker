@@ -1,4 +1,4 @@
-### https://github.com/medicslaboratory/0-docker [last update 2022-01-17]
+### https://github.com/medicslaboratory/0-docker [last update 2022-01-18]
 
 # Docker Images for Medics Laboratory
 There is 4 ubuntu18 based docker images you can use for medics laboratory
@@ -37,7 +37,7 @@ To Use:
 
 Note that the 'user' folder inside the docker images is '/root/' with the usual user's folders you can use; Documents, Downloads, Pictures, Public, Templates and Videos.
 ```
-docker run -v '/absolute_path_to_your_Documents_folder_as_example/Documents':'/root/Documents' medicslaboratory/medicslab:minimal mincinfo '/root/Documents/more_path_now_shared_with_container/t1w.mnc' 
+docker run -v '/absolute_path_to_your_User_folder/Documents':'/root/Documents' medicslaboratory/medicslab:minimal mincinfo '/root/Documents/more_path_now_shared_with_container/t1w.mnc' 
 ```
 Now the containt of your local folder 'Documents' is mounted inside the container in '/root/Documents'. In the example, we used the Minctools command 'mincinfo' on a local minc image, now "inside" the container. 
 
@@ -48,12 +48,14 @@ testing
 
 
 ## 3. Using Freesurfer (with images tagged as :freesurfer or :full):
+See [Freesurfer Input](https://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllOutputFiles#A001.mgz) on how to organize your data for Freesurfer analyses.
 
-The Freesurfer subjects folder inside the containers is: SUBJECTS_DIR=/usr/local/freesurfer/subjects. You will have to shared filesystems (-v) consequently.
+The Freesurfer subjects folder inside the containers is: SUBJECTS_DIR=/usr/local/freesurfer/subjects. You will have to shared your local filesystems (-v) accordingly.
 
 ```
-testing
+docker run -v '/absolute_path_to_your_local_SUBJECTS_DIR_equivalent':'/usr/local/freesurfer/subjects' medicslaboratory/medicslab:freesurfer recon-all -all -s <your_subject_folder>
 ```
+This will output the Freesurfer analyse results in '/absolute_path_to_your_local_SUBJECTS_DIR_equivalent'/<your_subject_folder>
 
 ## 4. Getting inside the container with command line interface (CLI) (with all 4 images):
 *Warning: All modifications inside the docker image will be lost after you exit the container. See [docker commit](https://docs.docker.com/engine/reference/commandline/commit/) to work around this.*
