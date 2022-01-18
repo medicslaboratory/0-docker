@@ -33,16 +33,27 @@ To Use:
 
 
 ## 1. Basic example use (with all 4 images):
+**IMPORTANT**: To use your local files inside the docker image, you must use the 'docker run' option VOLUME (-v) (shared filesystems). You can use multiple shared filesystems. https://docs.docker.com/storage/volumes/
 
-test
+Note that the 'user' folder inside the docker images is '/root/' with the usual user's folders you can use; Documents, Downloads, Pictures, Public, Templates and Videos.
+```
+docker run -v '/absolute_path_to_your_Documents_folder_as_example/Documents':'/root/Documents' medicslaboratory/medicslab:minimal mincinfo '/root/Documents/more_path_now_shared_with_container/t1w.mnc' 
+```
+Now the containt of your local folder 'Documents' is mounted inside the container in '/root/Documents'. In the example, we used the Minctools command 'mincinfo' on a local minc image, now "inside" the container. 
+
 
 ## 2. Using matlab runtime (with images tagged as :matlab or :full):
 
-test
+testing
+
 
 ## 3. Using Freesurfer (with images tagged as :freesurfer or :full):
 
-test
+The Freesurfer subjects folder inside the containers is: SUBJECTS_DIR=/usr/local/freesurfer/subjects. You will have to shared filesystems (-v) consequently.
+
+```
+testing
+```
 
 ## 4. Getting inside the container with command line interface (CLI) (with all 4 images):
 *Warning: All modifications inside the docker image will be lost after you exit the container. See [docker commit](https://docs.docker.com/engine/reference/commandline/commit/) to work around this.*
@@ -59,3 +70,4 @@ FROM medicslabratory/medicslab:<desired_version_as_tag>
 ```
 
 --------------------
+<!-- louis.dieumegarde@cervo.ulaval.ca -->
