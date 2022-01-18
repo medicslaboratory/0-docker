@@ -39,7 +39,7 @@ Note that the 'user' folder inside the docker images is '/root/' with the usual 
 ```
 docker run -v '/absolute_path_to_your_User_folder/Documents':'/root/Documents' medicslaboratory/medicslab:minimal mincinfo '/root/Documents/more_path_now_shared_with_container/t1w.mnc' 
 ```
-Now the containt of your local folder 'Documents' is mounted inside the container in '/root/Documents'. In the example, we used the Minctools command 'mincinfo' on a local minc image, now "inside" the container. 
+Now the contents of your local folder 'Documents' is mounted inside the container in '/root/Documents'. In this example, we used the Minctools command 'mincinfo' on a local minc image, now accessible "inside" the container. 
 
 
 ## 2. Using matlab runtime (with images tagged as :matlab or :full):
