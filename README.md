@@ -5,9 +5,9 @@ There is 4 ubuntu18 based docker images you can use for medics laboratory
 
 Images:
 
-  - 'medicslaboratory/medicslab:minimal' (964 Mb) - include **Python3.8**, **CMake3.10** and **Minctools2.3**
-  - 'medicslaboratory/medicslab:matlab' (8.96 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **MatlabRuntime2019b**
-  - 'medicslaboratory/medicslab:freesurfer' (11.2 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **Freesurfer6**.
+  - 'medicslaboratory/medicslab:minimal' (1.2 Gb) - include **Python3.8**, **CMake3.10** and **Minctools2.3**
+  - 'medicslaboratory/medicslab:matlab' (9.7 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **MatlabRuntime2019b**
+  - 'medicslaboratory/medicslab:freesurfer' (11.9 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **Freesurfer6**.
   - 'medicslaboratory/medicslab:full' (19.6 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3**, **MatlabRuntime2019b** and **Freesurfer6**
 
 To Use:
@@ -44,16 +44,16 @@ Now the contents of your local folder 'Documents' is mounted inside the containe
 
 ## 2. Using matlab runtime (with images tagged as :matlab or :full):
 
-testing
+still testing
 
 
 ## 3. Using Freesurfer (with images tagged as :freesurfer or :full):
 See [Freesurfer Input](https://surfer.nmr.mgh.harvard.edu/fswiki/ReconAllOutputFiles#A001.mgz) on how to organize your data for Freesurfer analyses.
 
-The Freesurfer subjects folder inside the containers is: SUBJECTS_DIR=/usr/local/freesurfer/subjects. You will have to shared your local filesystems (-v) accordingly.
+The Freesurfer subjects folder inside the containers is: SUBJECTS_DIR=/root/FS_subjects. You will have to shared your local filesystems (-v) accordingly.
 
 ```
-docker run -v '/absolute_path_to_your_local_SUBJECTS_DIR_equivalent':'/usr/local/freesurfer/subjects' medicslaboratory/medicslab:freesurfer recon-all -all -s <your_subject_folder>
+docker run -v '/absolute_path_to_your_local_SUBJECTS_DIR_equivalent':'/root/FS_subjects' medicslaboratory/medicslab:freesurfer recon-all -all -s <your_subject_folder>
 ```
 This will output the Freesurfer analyse results in '/absolute_path_to_your_local_SUBJECTS_DIR_equivalent'/<your_subject_folder>
 
