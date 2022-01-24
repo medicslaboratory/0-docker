@@ -8,7 +8,7 @@ Images:
   - 'medicslaboratory/medicslab:minimal' (1.2 Gb) - include **Python3.8**, **CMake3.10** and **Minctools2.3**
   - 'medicslaboratory/medicslab:matlab' (9.7 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **MatlabRuntime2019b**
   - 'medicslaboratory/medicslab:freesurfer' (11.9 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3** and **Freesurfer6**.
-  - 'medicslaboratory/medicslab:full' (19.6 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3**, **MatlabRuntime2019b** and **Freesurfer6**
+  - 'medicslaboratory/medicslab:full' (20.3 Gb) - include **Python3.8**, **CMake3.10**, **Minctools2.3**, **MatlabRuntime2019b** and **Freesurfer6**
 
 To Use:
 
@@ -44,7 +44,7 @@ Now the contents of your local folder 'Documents' is mounted inside the containe
 
 ## 2. Using matlab runtime (with images tagged as :matlab or :full):
 
-still testing
+*Further tests to do. Should work.*
 
 
 ## 3. Using Freesurfer (with images tagged as :freesurfer or :full):
