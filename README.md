@@ -13,11 +13,11 @@ To Use (Using a terminal or a command windows:
 
   Getting the docker image container to your computer:
   ```  
-  docker pull medicslabratory/medicslab:<desired_version_as_tag>  
+  docker pull medicslaboratory/medicslab:<desired_version_as_tag>  
   ```
   and running the container:
   ```  
-  docker run medicslabratory/medicslab:<desired_version_as_tag> --help 
+  docker run medicslaboratory/medicslab:<desired_version_as_tag> --help 
   ```
 <!-- Tip: [If you don’t want to preface the docker command with sudo](https://docs.docker.com/engine/install/linux-postinstall/). -->
 ---------------------------
@@ -61,7 +61,7 @@ This will output the Freesurfer analyse results in '/absolute_path_to_your_local
 
 To enter inside the container image, use 'docker run' in this form:
 ```
-docker run -it medicslabratory/medicslab:<desired_version_as_tag> /bin/bash
+docker run -it medicslaboratory/medicslab:<desired_version_as_tag> /bin/bash
 ```
 
 
